@@ -566,6 +566,10 @@ video {
   display: block;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .table {
   display: table;
 }
