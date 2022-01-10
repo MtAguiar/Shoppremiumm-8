@@ -29,7 +29,8 @@
     var currentPage = '{{ template.name }}'
         ,   cartEndpoint = 'https://api.dooki.com.br/v2/public/shopify/cart'
         ,   statusEndpoint = 'https://api.dooki.com.br/v2/public/shopify/status'
-        ,   shop = '{{ shop.secure_url }}';
+        ,   shop = '{{ shop.secure_url }}'
+        ,   shopifyInternalUrl = '{{ shop.permanent_domain }}';
 
     window.yampiCheckoutUrl = '';
 
@@ -54,6 +55,7 @@
 
             var data = {
                 shop: window.location.host,
+                shopify_internal_domain: shopifyInternalUrl,
                 cart_payload: cartPayload
             };
 
